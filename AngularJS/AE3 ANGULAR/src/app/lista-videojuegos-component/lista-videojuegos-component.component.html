@@ -1,0 +1,22 @@
+<h1>Lista de videojuegos</h1>
+
+
+<div id="lista">
+    <!-- mediante un nfor, recorremos el array, y pintamos los valores en una tabla. -->
+    <table *ngFor="let juego of videoJuegos; index as i">
+        <tr>
+            <td>ID: {{juego.id}}</td>
+        </tr>
+        <tr>
+            <td>Título: {{juego.titulo}} </td>
+        </tr>
+        <tr>     
+            <td>Valoración: {{juego.valoracionMedia}}</td>
+        </tr>
+        <br>
+        <!-- Mediante "routerLink", definimos la accion de navegacion del botón -->
+        <button routerLink="/detalle/{{juego.id}}">Detalles</button>
+        <br>
+        <br> 
+    </table>
+</div>
